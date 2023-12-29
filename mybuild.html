@@ -1,0 +1,31 @@
+~/ninja$ ./configure.py --bootstrap
+bootstrapping ninja...
+warning: A compatible version of re2c (>= 0.15.3) was not found; changes to src/*.in.cc will not affect your build.
+In file included from /usr/include/stdio.h:964,
+                 from /usr/include/c++/13/cstdio:42,
+                 from /usr/include/c++/13/ext/string_conversions.h:45,
+                 from /usr/include/c++/13/bits/basic_string.h:4097,
+                 from /usr/include/c++/13/string:54,
+                 from ./src/deps_log.h:18,
+                 from ./src/deps_log.cc:15:
+In function ‘size_t fread(void*, size_t, size_t, FILE*)’,
+    inlined from ‘LoadStatus DepsLog::Load(const std::string&, State*, std::string*)’ at ./src/deps_log.cc:200:39:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:213:29: warning: call to ‘__fread_chk_warn’ declared with attribute warning: fread called with bigger size * nmemb than length of destination buffer [-Wattribute-warning]
+  213 |     return __fread_chk_warn (__ptr, sz, __size, __n, __stream);
+      |            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wrote build.ninja.
+bootstrap complete.  rebuilding...
+[12/32] CXX build/deps_log.o
+In file included from /usr/include/stdio.h:964,
+                 from /usr/include/c++/13/cstdio:42,
+                 from /usr/include/c++/13/ext/string_conversions.h:45,
+                 from /usr/include/c++/13/bits/basic_string.h:4097,
+                 from /usr/include/c++/13/string:54,
+                 from src/deps_log.h:18,
+                 from src/deps_log.cc:15:
+In function ‘size_t fread(void*, size_t, size_t, FILE*)’,
+    inlined from ‘LoadStatus DepsLog::Load(const std::string&, State*, std::string*)’ at src/deps_log.cc:200:39:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:213:29: warning: call to ‘__fread_chk_warn’ declared with attribute warning: fread called with bigger size * nmemb than length of destination buffer [-Wattribute-warning]
+  213 |     return __fread_chk_warn (__ptr, sz, __size, __n, __stream);
+      |            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[32/32] LINK ninja
